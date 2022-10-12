@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {# переменные из контекста используем с двойными фигурными скобками #}
+    <h1>{{ title }}</h1>
+    <div>
+        <p>Rating: {{ film.rating }}</p>
+        <p>Country: {{ film.country }}</p>
+    </div>
+{% endblock %}

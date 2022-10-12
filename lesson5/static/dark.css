@@ -1,0 +1,21 @@
+body {
+    background-color: #2F4F4F;
+    color: white;
+}
+.sec {
+    background-color: silver;
+    border: 1px solid #00000;
+}
+.main {
+    border: 2px solid white;
+}
+ input[type=text], input[type=number] {
+     background: #D3D3D3;
+ }
+ input[type=submit], #but {
+      background-color: #808080;
+      color: white;
+ }
+input[type=submit]:hover {
+background-color: black;
+}

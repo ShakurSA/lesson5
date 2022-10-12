@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1>{{ title }}</h1>
+    {#  условие должно обязательно закрываться конструкцией {% endif %} #}
+    {#  цикл так же должен закрываться конструкцией {% endfor %} #}
+
+
+<div class="main">
+<form method="post">
+<h2><b>Новый фильм:</b></h2>
+    <label class="sign-in-form__label"><b>id:</b><br>
+            <input  type="number" id='cou1' placeholder="Укажите id" name="id" required>
+        </label>
+        <br>
+        <label class="sign-in-form__label"><b>name:</b><br>
+        <input  type="text" id='nam1' placeholder="Введите название фильма" name="name" required maxlength="100">
+    </label>
+        <br>
+        <label class="sign-in-form__label"><b>rating:</b><br>
+            <input  type="text" id='rat1' placeholder="Укажите рейтинг" name="rating" required >
+        </label>
+        <br>
+    <label class="sign-in-form__label"><b>country:</b><br>
+            <input  type="text" id='cou1' placeholder="Укажите страну" name="country" required maxlength="100">
+        </label>
+        <br>
+        <input type="hidden" name="action" value="posting">
+        <input type="submit" value="Добавить">
+        </form>
+</div>
+    {% if country %}
+        {% for film in films %}
+            {% if country == film.country %}
+                <div class="sec" onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+                    <p>{{ film.name }}</p>
+                    <p>{{ film.rating }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% for film in films %}
+            <div class="sec" onclick="location.href = '{{ url_for("get_film", film_id=film.id) }}'">
+                <p>{{ film.name }}</p>
+                <p>{{ film.rating }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

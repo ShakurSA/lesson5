@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Change Mode Page</h1>
+<form action="{{url_for('change_mode')}}" method="post">
+ <input type="hidden" id="userInput" name="userInput">
+<button type="submit" id='but' onClick="confirmBooking()"> Сменить тему </button>
+</form>
+{% endblock %}
+{% block script %}
+    <script>
+    function confirmBooking() {
+        if(confirm('Хотите изменить тему?') == true) {
+            document.getElementById("userInput").value = "True";
+        }
+        else {
+             document.getElementById("userInput").value = "False";
+             return 0;
+        }
+}
+    </script>
+{% endblock %}

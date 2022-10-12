@@ -1,0 +1,56 @@
+[
+  {
+    "id": 0,
+    "name": "Russian Film 1",
+    "rating": 3.4,
+    "country": "Russia"
+  },
+  {
+    "id": 1,
+    "name": "Russian Film 2",
+    "rating": 5.2,
+    "country": "Russia"
+  },
+  {
+    "id": 2,
+    "name": "Russian Film 3",
+    "rating": 4.4,
+    "country": "Russia"
+  },
+  {
+    "id": 3,
+    "name": "American Film 1",
+    "rating": 9.1,
+    "country": "USA"
+  },
+  {
+    "id": 4,
+    "name": "American Film 2",
+    "rating": 7.9,
+    "country": "USA"
+  },
+  {
+    "id": 5,
+    "name": "American Film 3",
+    "rating": 3.9,
+    "country": "USA"
+  },
+  {
+    "id": 6,
+    "name": "French Film 1",
+    "rating": 6.7,
+    "country": "France"
+  },
+  {
+    "id": 7,
+    "name": "French Film 2",
+    "rating": 7.2,
+    "country": "France"
+  },
+  {
+    "id": 8,
+    "name": "French Film 3",
+    "rating": 8.7,
+    "country": "France"
+  }
+]
